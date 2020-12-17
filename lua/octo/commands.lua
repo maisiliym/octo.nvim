@@ -607,6 +607,10 @@ function M.reaction_action(action, reaction)
 
   local url, args, line, cb_url, reactions
 
+  if not vim.g.octo_loggedin_user then
+    octo.check_login()
+  end
+
   if comment then
     -- found a comment at cursor
     comment = comment[1]

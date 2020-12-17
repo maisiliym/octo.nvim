@@ -75,12 +75,6 @@ augroup END
 " sign definitions
 lua require'octo.signs'.setup()
 
-" logged-in user
-if !exists("g:octo_loggedin_user")
-  let g:octo_loggedin_user = v:null
-  lua require'octo'.check_login()
-endif
-
 " settings
 let g:octo_date_format = get(g:, 'octo_date_format', "%Y %b %d %I:%M %p %Z")
 
